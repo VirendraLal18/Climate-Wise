@@ -91,7 +91,7 @@ function Forecast({ forecast }: props): JSX.Element {
           <Widgets
             icon="feelsLike"
             title="Feels Like"
-            info={<Degree temp={Math.round(today.main.feels_like)} />}
+            info={`${<Degree temp={Math.round(today.main.feels_like)} />}`}
             description={`${
               today.main.feels_like < today.main.temp
                 ? "Feels Colder"
