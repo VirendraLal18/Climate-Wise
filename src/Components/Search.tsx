@@ -1,14 +1,14 @@
-import { ChangeEvent } from "react";
-import { optionType } from "../types";
-import AppIcon from "./AppIcon";
+import { ChangeEvent } from "react"
+import { optionType } from "../types"
+import AppIcon from "./AppIcon"
 
 type Props = {
-  place: string;
-  onInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  options: [];
-  onOptionSelect: (option: optionType) => void;
-  onSearch: () => void;
-};
+  place: string
+  onInputChange: (e: ChangeEvent<HTMLInputElement>) => void
+  options: []
+  onOptionSelect: (option: optionType) => void
+  onSearch: () => void
+}
 
 function Search({
   place,
@@ -64,7 +64,7 @@ function Search({
         </div>
       </section>
     </main>
-  );
+  )
 }
 
-export default Search;
+export default Search

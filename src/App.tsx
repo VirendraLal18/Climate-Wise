@@ -1,17 +1,17 @@
-import { useState, ChangeEvent, useEffect } from "react";
-import Search from "./Components/Search";
-import "./App.css";
-import { optionType, forecastType } from "./types";
-import Forecast from "./Components/Forecast";
-import useForecast from "./Hooks/UseForecast";
-import HomepageImage from "./Components/homepageImage";
+import { useState, ChangeEvent, useEffect } from "react"
+import Search from "./Components/Search"
+import "./App.css"
+import { optionType, forecastType } from "./types"
+import Forecast from "./Components/Forecast"
+import useForecast from "./Hooks/UseForecast"
+import HomepageImage from "./Components/homepageImage"
 
 function App(): JSX.Element {
   const { place, options, forecast, onInputChange, onOptionSelect, onSearch } =
-    useForecast();
+    useForecast()
 
   return (
-    <main className=" flex justify-between items-center bg-gradient-to-b bg-bg5 h-[100vh] ">
+    <main className=" flex justify-between items-center bg-gradient-to-b !bg-bg-6 h-[100vh] ">
       <Search
         place={place}
         onInputChange={onInputChange}
@@ -30,7 +30,7 @@ function App(): JSX.Element {
         )}
       </div>
     </main>
-  );
+  )
 }
 
-export default App;
+export default App

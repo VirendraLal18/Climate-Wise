@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Sunrise = () => {
   return (
@@ -23,7 +23,7 @@ const Sunrise = () => {
       <line x1="23" y1="22" x2="1" y2="22"></line>
       <polyline points="8 6 12 2 16 6"></polyline>
     </svg>
-  );
-};
+  )
+}
 
-export default Sunrise;
+export default Sunrise

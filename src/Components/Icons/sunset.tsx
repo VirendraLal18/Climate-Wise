@@ -23,7 +23,7 @@ function Sunset() {
         <polyline points="16 5 12 9 8 5"></polyline>
       </svg>
     </div>
-  );
+  )
 }
 
-export default Sunset;
+export default Sunset

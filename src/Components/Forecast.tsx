@@ -1,8 +1,8 @@
-import React from "react";
-import { forecastType } from "../types";
-import Degree from "./Degree";
-import Sunrise from "./Icons/sunrise";
-import Sunset from "./Icons/sunset";
+import React from "react"
+import { forecastType } from "../types"
+import Degree from "./Degree"
+import Sunrise from "./Icons/sunrise"
+import Sunset from "./Icons/sunset"
 import {
   getSunTime,
   getWindDirection,
@@ -10,16 +10,16 @@ import {
   getPop,
   getPressureInfo,
   getVisibilityValue,
-} from "../helpers/helper";
-import Widgets from "./widgets";
-import '../App.css'
+} from "../helpers/helper"
+import Widgets from "./widgets"
+import "../App.css"
 
 type props = {
-  forecast: forecastType;
-};
+  forecast: forecastType
+}
 
 function Forecast({ forecast }: props): JSX.Element {
-  const today = forecast.list[0];
+  const today = forecast.list[0]
 
   return (
     <>
@@ -61,20 +61,22 @@ function Forecast({ forecast }: props): JSX.Element {
                   </p>
                 </div>
               </>
-            );
+            )
           })}
         </section>
 
         <section className="flex gap-x-10 justify-between my-10 items-center">
           <div className="bg-white bg-opacity-40 drop-shadow-xl h-[130px] w-[210px] rounded-lg flex flex-col items-center hover:bg-zinc-500 hover:h-[140px] hover:w-[220px]">
-            <Sunrise />{""}
+            <Sunrise />
+            {""}
             <span className="text-3xl text-white font-thin">
               {getSunTime(forecast.sunrise)}
             </span>
           </div>
 
           <div className="bg-white bg-opacity-40 drop-shadow-xl h-[130px] w-[210px] rounded-lg flex flex-col items-center hover:bg-zinc-500 hover:h-[140px] hover:w-[220px]">
-            <Sunset />{""}
+            <Sunset />
+            {""}
             <span className="text-3xl text-white font-thin">
               {getSunTime(forecast.sunset)}
             </span>
@@ -91,7 +93,7 @@ function Forecast({ forecast }: props): JSX.Element {
           <Widgets
             icon="feelsLike"
             title="Feels Like"
-            info={`${<Degree temp={Math.round(today.main.feels_like)} />}`}
+            info={`${(<Degree temp={Math.round(today.main.feels_like)} />)}`}
             description={`${
               today.main.feels_like < today.main.temp
                 ? "Feels Colder"
@@ -131,7 +133,7 @@ function Forecast({ forecast }: props): JSX.Element {
         </section>
       </div>
     </>
-  );
+  )
 }
 
-export default Forecast;
+export default Forecast

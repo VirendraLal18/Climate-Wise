@@ -22,7 +22,7 @@ const feelsLike = () => {
       <path d="M19.4 5.6l-.7 .7" />
       <path d="M18.7 17.7l.7 .7" />
     </svg>
-  );
-};
+  )
+}
 
-export default feelsLike;
+export default feelsLike

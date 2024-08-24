@@ -1,27 +1,27 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    mode: 'jit',
-    content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    theme: {
-      extend: {
-        backgroundImage: {
-          'bg1': "url(../Project_Images/green-grass-bald-hill-mountain-scenic-park.jpg)",
-          'bg2': "url(../Project_Images/natural-sky-clouds-background.jpg)",
-          'bg3': "url(../Project_Images/sunrise-hilly-landscape_23-2147632843.jpg)",
-          'bg4': "url(../Project_Images/rainy-glass-pane.jpg)",
-          'bg5': "url(../Project_Images/natural-sky-1.jpg)",
-          'bg6': "url(../Project_Images/natural-sky-2.jpg)"
-
-        },
-        backgroundSize: {
-          'bg1': "cover",
-          'bg2': "cover",
-          'bg3': "cover",
-          'bg4': "cover",
-          'bg5': "cover",
-          'bg6': "cover",
-        }
+  mode: "jit",
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
+  theme: {
+    extend: {
+      backgroundImage: {
+        "bg-1": "url('/img/green-grass-bald-hill-mountain-scenic-park.jpg')",
+        "bg-2": "url('/img/natural-sky-clouds-background.jpg')",
+        "bg-3": "url('/img/sunrise-hilly-landscape_23-2147632843.jpg')",
+        "bg-4": "url('/img/rainy-glass-pane.jpg')",
+        "bg-5": "url('/img/natural-sky-1.jpg')",
+        "bg-6": "url('/img/natural-sky-2.jpg')",
+      },
+      backgroundSize: {
+        "bg-1": "cover",
+        "bg-2": "cover",
+        "bg-3": "cover",
+        "bg-4": "cover",
+        "bg-5": "cover",
+        "bg-6": "cover",
       },
     },
-    variants: {},
-    plugins: [],
-  }
+  },
+  variants: {},
+  plugins: [],
+}
