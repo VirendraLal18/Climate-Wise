@@ -11,7 +11,7 @@ const useForecast = () => {
   const [forecast, setForecast] = useState<forecastType | null>(null)
 
   const getPlace = (value: string) => {
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${value.trim()}
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${value.trim()}
       &limit=5&appid=${API_KEY}`)
       .then(res => res.json())
       .then(data => setOptions(data))
