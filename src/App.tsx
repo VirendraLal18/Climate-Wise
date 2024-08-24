@@ -11,9 +11,6 @@ function App(): JSX.Element {
     useForecast();
 
   return (
-    //bg-gradient-to-tr from-purple-400 via-purple-500 to-purple-900
-    //from-blue-400 to-gray-600
-
     <main className=" flex justify-between items-center bg-gradient-to-b bg-bg3 h-[100vh] ">
       <Search
         place={place}
