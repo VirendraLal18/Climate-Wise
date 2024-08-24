@@ -14,9 +14,9 @@ _HTML:_ For structuring and organizing content on the web
 **Getting Started:**  
 _To get started with the project, follow these steps:_  
 
-Clone the repository: _git clone https://github.com/your-username/climate-wise.git_
-Install dependencies: _npm install or yarn install_
-Start the development server: _npm run dev or yarn dev_
+Clone the repository: _git clone https://github.com/your-username/climate-wise.git_  
+Install dependencies: _npm install or yarn install_  
+Start the development server: _npm run dev or yarn dev_  
 
 **Contributing:**  
 Contributions to Climate Wise are welcome! If you'd like to contribute to the project, please fork the repository,  
