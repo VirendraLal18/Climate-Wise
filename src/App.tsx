@@ -11,7 +11,7 @@ function App(): JSX.Element {
     useForecast()
 
   return (
-    <main className=" flex justify-between items-center bg-gradient-to-b !bg-bg-6 h-[100vh] ">
+    <main className=" flex justify-between items-center bg-gradient-to-b !bg-bg-3 h-[100vh] ">
       <Search
         place={place}
         onInputChange={onInputChange}
