@@ -47,7 +47,7 @@ export const getPop = (value: number): string => {
 export const getPressureInfo = (pressure: number): string => {
   if (pressure <= 980) return "Low pressure"
 
-  if (pressure > 980 && pressure < 1020) "Normal pressure"
+  if (pressure > 980 && pressure < 1020) return "Normal pressure"
 
   return "High pressure"
 }

@@ -1,4 +1,8 @@
-export default function Degree({ temp }: { temp: number }): JSX.Element {
+type props = {
+  temp: number
+}
+
+const Degree = ({temp}: props): JSX.Element => {
   return (
     <span>
       {temp}
@@ -6,3 +10,5 @@ export default function Degree({ temp }: { temp: number }): JSX.Element {
     </span>
   )
 }
+
+export default Degree
