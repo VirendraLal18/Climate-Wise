@@ -1,6 +1,7 @@
 import { useState, useEffect, ChangeEvent } from "react"
 import { optionType } from "../types"
 import { forecastType } from "../types"
+import useDebounce from "./UseDebounce"
 
 const useForecast = () => {
   const API_KEY = import.meta.env.VITE_API_KEY!
@@ -9,6 +10,8 @@ const useForecast = () => {
   const [options, setOptions] = useState<[]>([])
   const [city, setCity] = useState<optionType | null>(null)
   const [forecast, setForecast] = useState<forecastType | null>(null)
+
+  const debouncedPlace = useDebounce(place, 2000) // Debounce the place value
 
   const getPlace = (value: string) => {
     fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${value.trim()}
@@ -23,8 +26,15 @@ const useForecast = () => {
     setPlace(value)
     if (value === "") setPlace("")
     setForecast(null)
-    getPlace(value)
   }
+
+  useEffect(() => {
+    if (debouncedPlace) {
+      getPlace(debouncedPlace)
+    } else {
+      setOptions([])
+    }
+  }, [debouncedPlace]) // Only make API calls when the debounced value changes
 
   const getForecast = (city: optionType) => {
     fetch(
